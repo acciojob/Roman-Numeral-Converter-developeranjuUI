@@ -12,7 +12,7 @@ function convertToRoman(num) {
   //your code here
 	if(num<=0 || num>=100000) return "Invalid Input";
 	let result = '';
-	for(let [symbol,value]  of obj){
+	for(let [key,[symbol,value]]  of Object.entries(obj)){
 		while(num>=value){
 			result += symbol;
 			num -= value;
